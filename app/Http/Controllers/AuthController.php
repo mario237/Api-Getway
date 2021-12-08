@@ -58,11 +58,10 @@ class AuthController extends Controller
         return $this->successMessage('User successfully signed out');
     }
 
-    public function getUser(Request $request): JsonResponse
+    public function me(): JsonResponse
     {
-        dd($request->token);
-        return ApiResponse::successResponse(\auth());
+        dd('test');
+        return response()->json(auth()->user()->getAuthIdentifierName());
     }
-
 
 }
