@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'accounting' => [
+        'base_uri' => env('Accounting_SERVICE_BASE_URL'),
+        'secret' => env('Accounting_SERVICE_SECRET'),
+    ]
+
 ];
